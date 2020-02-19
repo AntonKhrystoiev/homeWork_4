@@ -1,0 +1,85 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+html {
+	font-size: 62.5%;
+	color: #fff;
+}
+
+body {
+	background-color: #131a25;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: 400;
+}
+
+.wrapper {
+	min-height: 100%;
+}
+
+.center {
+	max-width: 960px;
+	padding: 0 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: stretch;
+	margin: 0 auto;
+	position: relative;
+}
+
+.step {
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	word-wrap: break-word;
+	width: 20%;
+	border: 2px solid black;
+	padding: 10px;
+	font-size: 18px;
+	font-weight: 800;
+	line-height: 18px;
+	border-radius: 10px; 
+	background-color: #C8DDC4;
+	color: black;
+    background-image: linear-gradient(to left, #C8DDC4 0%, #C8DDC4 33%, #B2DEE6 66%, #B2DEE6 100%);
+    background-size: 300% auto;
+    background-position: right center;
+	transition: background-position linear .5s;
+}
+
+.step:target ~ .step{
+	color: grey;
+}
+
+.step:target {
+	color: red;
+    background-position: left center;
+}
+
+.step_content {
+	display: none;
+}
+
+.step:target .step_content{
+	display: inline-block;
+	cursor: default;
+	width: 60%;
+	border: 1px solid black;
+	background-color: #ebebeb;
+	color: black;
+	padding: 10px;
+	text-align: left;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 20px auto 0;
+	top: 100%;
+}
